@@ -1,0 +1,58 @@
+---
+# chapter02/src/data_definitions.yaml
+# Example Data Definitions and Quality Rules derived from L2/L3 requirements
+customer_master_data_product:
+  name: Customer 360 Master Data
+  layer: L2_Knowledge
+  description: Unified and conformed customer master data for personalization and
+    analytics.
+  schema:
+    - name: customer_id
+      type: string
+      primary_key: true
+      description: Unique identifier for each customer.
+    - name: first_name
+      type: string
+      pii: true
+      encryption_policy_id: PII_Encryption_Policy  # Links to L3 policy
+    - name: last_name
+      type: string
+      pii: true
+      encryption_policy_id: PII_Encryption_Policy
+    - name: email
+      type: string
+      pii: true
+      encryption_policy_id: PII_Encryption_Policy
+      data_quality_checks:
+        - rule: email_format_validation
+          severity: Critical
+          description: Must adhere to standard email regex format.
+    - name: registration_date
+      type: timestamp
+      description: Date of customer registration.
+    - name: total_lifetime_value
+      type: decimal
+      data_quality_checks:
+        - rule: non_negative
+          severity: High
+          description: Value must be non-negative.
+data_quality_slas:
+  - id: Data_Quality_SLA_Customer_Master  # Links to L3 policy
+    target_data_product: customer_master_data_product
+    metrics:
+      - name: accuracy
+        target_percentage: 99.9
+        frequency: monthly
+        description: Accuracy of key customer attributes against source systems.
+      - name: completeness
+        target_percentage: 95.0
+        frequency: daily
+        description: Completeness of required fields (e.g., email, registration_date).
+access_controls:
+  marketing_team_access_policy:
+    target_data_products: [customer_master_data_product]
+    allowed_attributes:
+      - customer_id
+      - total_lifetime_value
+      # Exclude PII unless explicitly authorized with additional policy
+    aggregation_requirement: Aggregated behavior patterns only for analytics.
