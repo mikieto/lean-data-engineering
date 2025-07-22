@@ -16,7 +16,7 @@ By mastering this workflow, you will not only accelerate your data projects but 
 
 ### AI Collaboration Workflow Flow
 
-```{mermaid}
+```mermaid
 %%| label: fig-adr-workflow
 %%| fig-cap: "AI Collaboration Workflow: ADR as the central artifact."
 graph TD
@@ -51,11 +51,11 @@ graph TD
     style AI_GenCode fill:#E3F2FD,stroke:#1E88E5
     style AI_Refine fill:#E3F2FD,stroke:#1E88E5
     style H_End fill:#E8F5E9,stroke:#388E3C
-````
+```
 
 ## Get Started Instantly with GitHub Codespaces
 
-[](https://www.google.com/search?q=https://codespaces.new/mikieto/lean-data-engineering)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/mikieto/lean-data-engineering)
 
 **Click the badge above to launch a pre-configured development environment in GitHub Codespaces.** This will set up all necessary tools and dependencies automatically, so you can jump straight into the lab exercises without any local setup.
 
