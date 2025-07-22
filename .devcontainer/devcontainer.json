@@ -1,0 +1,16 @@
+{
+    "name": "Lean Data Engineering",
+    "build": { "dockerfile": "Dockerfile", "context": ".." },
+    "workspaceFolder": "/workspaces/lean-data-engineering",
+    "remoteUser": "vscode",
+
+    "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash",
+        "terminal.integrated.profiles.linux": {
+          "bash": {
+            "path": "/bin/bash",
+            "args": ["--login"]
+            }
+        }
+    }
+}

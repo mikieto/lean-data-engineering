@@ -1,0 +1,122 @@
+# .gitignore
+
+# ---------------------------------------------------------------
+# Project-specific Files and Directories
+# ---------------------------------------------------------------
+
+# Quarto / Book build artifacts
+_quarto.yml
+_extensions/
+_freeze/
+_publish/
+*.html
+*.pdf
+*.docx
+*.epub
+*.ipynb
+output/ # Quarto output directory (e.g., for generated docx)
+submissions/ # Publisher submissions
+
+# ADRs - if you generate HTML/PDF versions of ADRs, ignore them
+adr/*.html
+adr/*.pdf
+
+# ---------------------------------------------------------------
+# IDE and Editor Files
+# ---------------------------------------------------------------
+
+.vscode/          # VSCode user-specific settings (keep if you want to share workspace settings)
+#.vscode/*.json   # Uncomment to ignore all JSON settings
+!.vscode/settings.json # But keep workspace settings for consistent behavior
+!.vscode/extensions.json
+!.vscode/tasks.json
+!.vscode/launch.json
+.idea/            # IntelliJ IDEA
+*.swp             # Vim swap files
+*.swo
+*~                # Backup files
+.DS_Store         # macOS specific
+Thumbs.db         # Windows specific
+
+# ---------------------------------------------------------------
+# Python Specific
+# ---------------------------------------------------------------
+
+# Byte-code files
+*.pyc
+__pycache__/
+*.pyd
+*.egg-info/
+.pytest_cache/
+
+# Virtual environments
+.venv/
+env/
+venv/
+*.env
+.env
+# If using pipenv
+.pipenv/
+# If using poetry
+.venv/
+
+# Jupyter Notebook related
+.ipynb_checkpoints/
+jupyter_notebook_config.py
+jupyter_notebook_config.json
+
+# Python build artifacts
+build/
+dist/
+*.egg
+*.whl
+
+# ---------------------------------------------------------------
+# Terraform Specific
+# ---------------------------------------------------------------
+
+# Terraform state files
+.terraform/           # Local Terraform modules and plugins
+*.tfstate             # Terraform state file
+*.tfstate.backup      # Terraform state backup files
+
+# Crash log files
+crash.log             # Terraform crash log file
+
+# Exclude all .terraform.lock.hcl files. This file is intended for version control.
+# If you are explicitly versioning provider versions in .terraform.lock.hcl,
+# then comment out the line below. For simple hands-ons, ignoring might be fine.
+#.terraform.lock.hcl
+
+# Terraform plan files
+*.tfplan
+
+# Local .terraformignore file
+.terraformignore
+
+# Infracost reports (added to Makefile)
+infracost_report.json #
+
+# ---------------------------------------------------------------
+# Docker / Dev Container Specific
+# ---------------------------------------------------------------
+
+# Dev Container related files generated during setup/runtime
+.devcontainer/.devcontainer.log
+.devcontainer/.devcontainer.log.json
+.devcontainer/.devcontainer.metadata.json
+.devcontainer/.devcontainer-builds
+.devcontainer/.gitattributes # If generated
+.devcontainer/.gitignore # If generated
+.devcontainer/container-features
+.devcontainer/tmp
+
+# Docker compose volumes
+*.volume
+
+# Docker build cache
+.dockerignore
+
+# AWS CLI / SDK credentials and config
+# DO NOT COMMIT YOUR AWS CREDENTIALS OR LOCAL CONFIGURATIONS!
+.aws/
