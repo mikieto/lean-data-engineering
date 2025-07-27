@@ -4,7 +4,7 @@ Welcome to the Chapter 2 Hands-on Lab\! This lab guides you through the practica
 
 ## Get Started Instantly with GitHub Codespaces
 
-[](https://codespaces.new/mikieto/lean-data-engineering)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/mikieto/lean-data-engineering)
 
 **Click the badge above to launch a pre-configured development environment.** This will set up all necessary tools automatically.
 
