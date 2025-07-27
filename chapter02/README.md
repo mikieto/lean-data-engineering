@@ -72,4 +72,4 @@ If you find discrepancies, provide specific, corrective feedback to the AI, refe
   * `adr/0001-data-platform-scaling-strategy.md`: The example ADR to guide your work.
   * `main.tf`, `data_definitions.yaml`: Example solution files. Your AI's output may differ. Focus on the process.
   * `Makefile`: Contains shortcuts for validation and Terraform commands (`init`, `plan`, `apply`, `destroy`).
-  * `prompts/`: Contains more advanced, structured YAML prompts you can experiment with.
+  
