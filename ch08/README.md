@@ -136,3 +136,4 @@ Please generate a Rego policy that implements these two rules. The policy should
   - **ADR & Checklist**: Before you begin, please review the "specification" for this lab in the [ADR](https://www.google.com/search?q=./adr/0001-implement-fail-guard-prevent-loop.md) and the "test cases" in the [Validation Checklist](https://www.google.com/search?q=./adr/validation_checklist.md).
   - **Environment**: This lab is designed to be run in a GitHub Codespaces environment.
   - **AI Output May Vary**: If you use the prompt above with your own LLM, the generated Rego code may differ slightly from the solution provided in this lab. This is expected. The goal is to learn the **process** of prompting, reviewing, and refining AI-generated code.
+  
