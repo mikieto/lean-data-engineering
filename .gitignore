@@ -1,5 +1,9 @@
 # .gitignore
 
+# Generated artifacts from hands-on labs
+**/metrics/
+**/guards/policies.rego
+
 # ---------------------------------------------------------------
 # Project-specific Files and Directories
 # ---------------------------------------------------------------

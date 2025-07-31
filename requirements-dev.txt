@@ -1,5 +1,8 @@
+# Core Libraries for Hands-on Labs
+pandas
+numpy
+
+# Development & Linting Tools
 yamllint>=1.35.0
 yamlfix>=1.17.0
-dbt-core==1.7.0
-dbt-postgres==1.7.0
 checkov

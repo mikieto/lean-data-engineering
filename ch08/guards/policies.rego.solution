@@ -1,0 +1,19 @@
+package policy
+
+default deny = []
+
+# Rule 1: Check for required columns
+deny[msg] {
+    required_cols := {"order_id", "customer_id", "order_ts", "net_amount"}
+    provided_cols := {col | col := input.columns[_]}
+    missing_cols := required_cols - provided_cols
+    count(missing_cols) > 0
+    msg := sprintf("Required column(s) are missing: %v", [missing_cols])
+}
+
+# Rule 2: Check PSI for net_amount
+deny[msg] {
+    psi_threshold := 0.2
+    input.psi.net_amount > psi_threshold
+    msg := sprintf("Population Stability Index for net_amount is %.2f, which exceeds the threshold of %.2f", [input.psi.net_amount, psi_threshold])
+}
