@@ -1,4 +1,4 @@
-# Validation Checklist for ADR-CH08-001
+# Validation Checklist for Chapter 8 Hands-on
 
 This checklist is used to manually verify that the hands-on lab for Chapter 8 has been implemented correctly according to the ADR.
 
@@ -19,10 +19,10 @@ Run the `make` commands in the specified order and check if the result matches t
 
 ### Guard Implementation Verification
 
--   [ ] **Command**: `make fix`
+-   [ ] **Action**: Run `make fix`.
 -   [ ] **Expected Outcome**: The command completes successfully. A file named `guards/policies.rego` should now exist and contain a new policy rule designed to catch the drift.
 
 ### Prevention Verification
 
--   [ ] **Command**: `make run` (executed *after* `make fix`)
+-   [ ] **Action**: Run `make run` (executed *after* `make fix`).
 -   [ ] **Expected Outcome**: The command **fails** again with a non-zero exit code. Crucially, the log output must now indicate that the failure was caused by the **OPA policy** explicitly denying the data. This confirms the "guard" is working as intended.
