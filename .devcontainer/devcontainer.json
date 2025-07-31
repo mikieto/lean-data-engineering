@@ -12,5 +12,6 @@
             "args": ["--login"]
             }
         }
-    }
+    },
+    "logLevel": "debug" // Add this line
 }
