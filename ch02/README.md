@@ -11,7 +11,7 @@ Your mission in this hands-on lab is to experience the **ADR-centric AI Collabor
 
 The ADR-centric workflow guides you from a business problem to a verified architecture, ensuring traceability of decisions. The diagram below illustrates the entire workflow, with **your focus in this lab highlighted**.
 
-```{mermaid}
+```mermaid
 %%| label: fig-ch02-map-integrated
 %%| fig-cap: "The End-to-End ADR-centric Workflow (Your Lab Focus Highlighted)."
 graph TD
