@@ -12,7 +12,7 @@ The Intellectual Immune System is an ecosystem of core practices that protect an
 
 The diagram below illustrates the collaborative workflow you will follow, with **your role as the Human Architect highlighted in yellow**.
 
-```{mermaid}
+```mermaid
 %%| label: fig-ch08-map-integrated
 %%| fig-cap: "The fail-guard-prevent Workflow (Your Lab Focus Highlighted)."
 graph TD
